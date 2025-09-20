@@ -1,5 +1,4 @@
-// src/components/BookFormModal.jsx
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   Dialog,
   DialogTitle,
@@ -12,7 +11,12 @@ import {
 } from "@mui/material";
 import { useForm } from "react-hook-form";
 
-export default function BookFormModal({ open, onClose, initialData, onSubmit }) {
+export default function BookFormModal({
+  open,
+  onClose,
+  initialData,
+  onSubmit,
+}) {
   const {
     register,
     handleSubmit,
@@ -29,7 +33,6 @@ export default function BookFormModal({ open, onClose, initialData, onSubmit }) 
     },
   });
 
-  // ✅ Reset when modal opens (not just when initialData changes)
   useEffect(() => {
     if (open) {
       if (initialData) {
@@ -55,7 +58,7 @@ export default function BookFormModal({ open, onClose, initialData, onSubmit }) 
   const handleFormSubmit = (data) => {
     onSubmit(data);
     onClose();
-    reset(); // ✅ clear after submit
+    reset();
   };
 
   return (
@@ -85,7 +88,7 @@ export default function BookFormModal({ open, onClose, initialData, onSubmit }) 
               {...register("genre", { required: "Genre is required" })}
               error={!!errors.genre}
               helperText={errors.genre?.message}
-              value={watch("genre") || ""} // ✅ controlled by RHF
+              value={watch("genre") || ""}
             >
               <MenuItem value="">Select Genre</MenuItem>
               <MenuItem value="Fiction">Fiction</MenuItem>
@@ -106,7 +109,7 @@ export default function BookFormModal({ open, onClose, initialData, onSubmit }) 
               select
               fullWidth
               {...register("status")}
-              value={watch("status") || "Available"} // ✅ controlled by RHF
+              value={watch("status") || "Available"}
             >
               <MenuItem value="Available">Available</MenuItem>
               <MenuItem value="Issued">Issued</MenuItem>

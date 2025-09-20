@@ -1,4 +1,3 @@
-// src/components/BookTable.jsx
 import {
   Table,
   TableBody,
@@ -16,8 +15,14 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-export default function BookTable({ books = [], loading, error, onEdit, onDelete }) {
-  // Ensure books is always an array
+export default function BookTable({
+  books = [],
+  loading,
+  error,
+  onEdit,
+  onDelete,
+}) {
+
   const safeBooks = Array.isArray(books) ? books : [];
 
   return (
@@ -37,7 +42,6 @@ export default function BookTable({ books = [], loading, error, onEdit, onDelete
         </TableHead>
 
         <TableBody>
-          {/* 🔹 Loading State with Skeletons */}
           {loading &&
             Array.from({ length: 5 }).map((_, i) => (
               <TableRow key={i}>
@@ -47,7 +51,6 @@ export default function BookTable({ books = [], loading, error, onEdit, onDelete
               </TableRow>
             ))}
 
-          {/* 🔹 Error State */}
           {!loading && error && (
             <TableRow>
               <TableCell colSpan={6}>
@@ -60,7 +63,6 @@ export default function BookTable({ books = [], loading, error, onEdit, onDelete
             </TableRow>
           )}
 
-          {/* 🔹 Empty State */}
           {!loading && !error && safeBooks.length === 0 && (
             <TableRow>
               <TableCell colSpan={6}>
@@ -73,7 +75,6 @@ export default function BookTable({ books = [], loading, error, onEdit, onDelete
             </TableRow>
           )}
 
-          {/* 🔹 Data Rows */}
           {!loading &&
             !error &&
             safeBooks.map((book) => (

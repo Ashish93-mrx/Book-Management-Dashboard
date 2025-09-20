@@ -1,8 +1,21 @@
 import { TextField, MenuItem, Stack } from "@mui/material";
 
-export default function Filters({ q, setQ, genre, setGenre, status, setStatus }) {
+export default function Filters({
+  q,
+  setQ,
+  genre,
+  setGenre,
+  status,
+  setStatus,
+}) {
   return (
-    <Stack mb={2} flexWrap="wrap" direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ my: { xs: 2, sm: 0 } }}>
+    <Stack
+      mb={2}
+      flexWrap="wrap"
+      direction={{ xs: "column", sm: "row" }}
+      spacing={2}
+      sx={{ my: { xs: 2, sm: 0 } }}
+    >
       <TextField
         label="Search"
         value={q || ""}
@@ -10,11 +23,10 @@ export default function Filters({ q, setQ, genre, setGenre, status, setStatus })
         size="small"
       />
 
-      {/* Genre Filter */}
       <TextField
         select
         label="Genre"
-        value={genre || ""} 
+        value={genre || ""}
         onChange={(e) => setGenre(e.target.value)}
         size="small"
         sx={{ minWidth: 150 }}
@@ -26,7 +38,6 @@ export default function Filters({ q, setQ, genre, setGenre, status, setStatus })
         <MenuItem value="Biography">Biography</MenuItem>
       </TextField>
 
-      {/* Status Filter */}
       <TextField
         select
         label="Status"

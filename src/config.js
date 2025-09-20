@@ -1,2 +1,1 @@
-export const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
-export const BOOKS_ENDPOINT = `${API_BASE}/books`;
+export const BOOKS_ENDPOINT = "https://crudcrud.com/api/5c5583e103324b5ebbdbc66f6b3b56b9/books";

@@ -5,6 +5,12 @@ Built with **Vite + React Query + Material UI + React Hook Form**.
 
 ---
 
+Note:
+
+I used environment variables (.env) for the API URL. Since CrudCrud keys expire every 24 hours, the repo includes a .env.example file with setup instructions.
+
+Performance optimizations: React Query caching, skeleton loaders, and lazy loading for routes.
+
 ## 🚀 Features
 
 - ✅ List books with title, author, genre, year, and status
@@ -87,4 +93,4 @@ src/
 
 👤 Author
 
-Your Name (@Ashish93-mrx)
+Ashish N M (@Ashish93-mrx)

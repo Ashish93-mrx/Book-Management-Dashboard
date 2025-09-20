@@ -41,3 +41,50 @@ Clone the repo and install dependencies:
 git clone https://github.com/your-username/book-management-app.git
 cd book-management-app
 npm install
+
+
+Create a .env file in the root:
+
+VITE_API_BASE=https://crudcrud.com/api/<YOUR-KEY>/books
+
+
+Run locally:
+
+npm run dev
+
+
+Build for production:
+
+npm run build
+npm run preview
+
+🌍 Deployment
+
+This project is deployed on Vercel.
+
+Environment variable used in Vercel:
+
+VITE_API_BASE=https://crudcrud.com/api/<YOUR-KEY>/books
+
+⚠️ Note: CrudCrud API keys expire every 24 hours. If data stops working, generate a new key from crudcrud.com
+ and update the .env or Vercel environment variable.
+
+
+📝 Notes
+
+Built as part of a frontend developer assessment task.
+
+Focused on clean code, UX best practices, and modular architecture.
+
+Folder structure:
+
+src/
+  api/         → API clients (axios)
+  hooks/       → Custom React Query hooks
+  components/  → UI components (Table, Modal, Filters, etc.)
+  pages/       → Page-level components (Dashboard)
+  App.jsx
+
+👤 Author
+
+Your Name (@Ashish93-mrx)

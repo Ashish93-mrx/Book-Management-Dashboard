@@ -1,1 +1,0 @@
-export const BOOKS_ENDPOINT = "https://crudcrud.com/api/5c5583e103324b5ebbdbc66f6b3b56b9/books";

@@ -1,12 +1,43 @@
-# React + Vite
+# 📚 Book Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive **React.js dashboard** for managing books with **CRUD operations, filters, search, and pagination**.  
+Built with **Vite + React Query + Material UI + React Hook Form**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ List books with title, author, genre, year, and status
+- ✅ Search by title or author
+- ✅ Filter by genre and status
+- ✅ Pagination (10 books per page)
+- ✅ Add / Edit books in a modal form with validation
+- ✅ Delete books with confirmation dialog
+- ✅ Toast notifications for feedback
+- ✅ Loading skeletons, error states, and empty states for better UX
+- ✅ Responsive UI with Material UI
+- ✅ API state management with React Query
+- ✅ Environment variables support (`.env` for API base URL)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React 19 + Vite**
+- **Material UI (MUI)**
+- **React Query (@tanstack/react-query)**
+- **React Hook Form**
+- **React Router v7**
+- **React Toastify**
+- **CrudCrud API** (mock backend)
+
+---
+
+## 📦 Installation & Setup
+
+Clone the repo and install dependencies:
+
+```sh
+git clone https://github.com/your-username/book-management-app.git
+cd book-management-app
+npm install
